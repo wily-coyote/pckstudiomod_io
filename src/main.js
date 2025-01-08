@@ -12,7 +12,7 @@ let codec;
 let format;
 
 // When updating, apply meta data changes to plugins.json entry!
-BBPlugin.register("pckstudio_tsv", {
+BBPlugin.register("pckstudiomod_io", {
 	title: "pckstudio-mod propdump IO",
 	icon: "icon.png",
 	author: "coyote",
@@ -22,7 +22,7 @@ BBPlugin.register("pckstudio_tsv", {
 	min_version: "4.9.0",
 	variant: "both",
 	onload() {
-		codec = new Codec("pckstudio_tsv", {
+		codec = new Codec("pckstudiomod_io", {
 			name: "pckstudio-mod Propdump (.tsv)",
 			extension: "tsv",
 			export_options: {
@@ -139,7 +139,7 @@ BBPlugin.register("pckstudio_tsv", {
 			}
 		});
 		format = new ModelFormat({
-			id: "pckstudio_tsv",
+			id: "pckstudiomod_io",
 			name: "pckstudio-mod BOX model",
 			category: "minecraft",
 			target: ["pckstudio-mod", "Minecraft: Legacy Console Edition"],
@@ -181,7 +181,7 @@ BBPlugin.register("pckstudio_tsv", {
 				generate_texture_template();
 			}
 		})
-		import_action = new Action("pckstudio_tsv_importer", {
+		import_action = new Action("pckstudiomod_io_importer", {
 			name: "Import pckstudio-mod Propdump",
 			category: "file",
 			description: "Import a .tsv file exported from pckstudio-mod.",
@@ -197,7 +197,7 @@ BBPlugin.register("pckstudio_tsv", {
 				})
 			}
 		});
-		export_action = new Action("pckstudio_tsv_export", {
+		export_action = new Action("pckstudiomod_io_export", {
 			name: "Export pckstudio-mod Propdump",
 			category: "file",
 			description: "Exports a .tsv file for importing in pckstudio-mod.",
