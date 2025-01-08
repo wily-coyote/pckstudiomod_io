@@ -245,18 +245,18 @@ let codec;
 let format;
 
 // When updating, apply meta data changes to plugins.json entry!
-BBPlugin.register("pckstudio_tsv", {
-	title: "PCK Studio-mod propdump IO",
+BBPlugin.register("pckstudiomod_io", {
+	title: "pckstudio-mod propdump IO",
 	icon: "icon.png",
 	author: "coyote",
-	description: "Handles import and export for PCK Studio-mod propdumps (.tsv).",
+	description: "Handles import and export for pckstudio-mod propdumps (.tsv).",
 	tags: ["Minecraft: Legacy Console Edition", "Importer", "Exporter"],
 	version: "0.0.0",
 	min_version: "4.9.0",
 	variant: "both",
 	onload() {
-		codec = new Codec("pckstudio_tsv", {
-			name: "PCK Studio-mod Propdump (.tsv)",
+		codec = new Codec("pckstudiomod_io", {
+			name: "pckstudio-mod Propdump (.tsv)",
 			extension: "tsv",
 			export_options: {
 				displayname: {
@@ -372,11 +372,11 @@ BBPlugin.register("pckstudio_tsv", {
 			}
 		});
 		format = new ModelFormat({
-			id: "pckstudio_tsv",
-			name: "PCK Studio-mod BOX model",
+			id: "pckstudiomod_io",
+			name: "pckstudio-mod BOX model",
 			category: "minecraft",
-			target: ["PCK Studio-mod", "Minecraft: Legacy Console Edition"],
-			description: "Custom player model for PCK Studio-mod.",
+			target: ["pckstudio-mod", "Minecraft: Legacy Console Edition"],
+			description: "Custom player model for pckstudio-mod.",
 			icon: "icon-player",
 			meshes: false,
 			rotate_cubes: false,
@@ -394,7 +394,7 @@ BBPlugin.register("pckstudio_tsv", {
 					{type: 'h3', text: tl("mode.start.format.informations")},
 					{text:
 						'* You can export the model as a propdump using the `File > Export` action or with the `Save Model` action.\n' +
-						'* You can then import the resulting TSV into PCK Studio-mod by right-clicking an existing skin and selecting `Import > Import property dump`.\n' +
+						'* You can then import the resulting TSV into pckstudio-mod by right-clicking an existing skin and selecting `Import > Import property dump`.\n' +
 						'* Raw property import/export in TSV is a feature only available in [my fork of PCK Studio](https://github.com/wily-coyote/PCK-Studio), which is what this format is built around.'
 					},
 					{type: 'h3', text: tl("mode.start.format.resources")},
@@ -414,15 +414,15 @@ BBPlugin.register("pckstudio_tsv", {
 				Object(_utils__WEBPACK_IMPORTED_MODULE_2__["generate_texture_template"])();
 			}
 		})
-		import_action = new Action("pckstudio_tsv_importer", {
-			name: "Import PCK Studio-mod Propdump",
+		import_action = new Action("pckstudiomod_io_importer", {
+			name: "Import pckstudio-mod Propdump",
 			category: "file",
-			description: "Import a .tsv file exported from PCK Studio-mod.",
+			description: "Import a .tsv file exported from pckstudio-mod.",
 			icon: "fa-file-import",
 			click(){
 				Blockbench.import({
 					extensions: ["tsv"],
-					type: "PCK Studio-mod Propdump",
+					type: "pckstudio-mod Propdump",
 					readtype: "text",
 				}, (files) => {
 					console.log("This is Chinese Slavery");
@@ -430,10 +430,10 @@ BBPlugin.register("pckstudio_tsv", {
 				})
 			}
 		});
-		export_action = new Action("pckstudio_tsv_export", {
-			name: "Export PCK Studio-mod Propdump",
+		export_action = new Action("pckstudiomod_io_export", {
+			name: "Export pckstudio-mod Propdump",
 			category: "file",
-			description: "Exports a .tsv file for importing in PCK Studio-mod.",
+			description: "Exports a .tsv file for importing in pckstudio-mod.",
 			icon: "fa-file-export",
 			click(){
 				codec.export();
