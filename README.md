@@ -1,12 +1,11 @@
-# PCK Studio-mod Blockbench plugin
+# pckstudio-mod Blockbench plugin
 
-[Blockbench](https://blockbench.net) IO plugin for [PCK
-Studio-mod](https://github.com/wily-coyote/PCK-Studio) propdumps.
+[Blockbench](https://blockbench.net) IO plugin for [pckstudio-mod](https://github.com/wily-coyote/PCK-Studio) propdumps.
 
 This plugin is mainly focused on importing, editing and exporting BOX
 properties.
 
-PCK Studio-mod is a fork of the original [PCK
+pckstudio-mod is a fork of the original [PCK
 Studio](https://github.com/PhoenixARC/-PCK-Studio).
 
 ## To build
