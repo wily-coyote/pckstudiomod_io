@@ -13,7 +13,7 @@ Studio](https://github.com/PhoenixARC/-PCK-Studio).
 Clone this repo somewhere, then navigate to the project's src folder:
 
 ```
-git clone https://github.com/wily-coyote/pckstudio_tsv
+git clone https://github.com/wily-coyote/pckstudiomod_io
 cd src
 ```
 
