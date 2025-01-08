@@ -20,7 +20,7 @@ export const REQUIRED_GROUPS = ["HEAD", "BODY", "ARM0", "ARM1", "LEG0", "LEG1"];
 
 /**
  * blockbench starts at bottom right front corner and ends at top left back corner
- * 4J starts at top right front corner
+ * 4J starts at top left front corner
  **/
 export class Box{
 	/**
@@ -86,7 +86,7 @@ export class Box{
 	 * @returns {ArrayVector3} vec
 	 **/
 	get from(){
-		return [this.x, (-this.y)-this.ys, this.z]
+		return [(-this.x)-this.xs, (-this.y)-this.ys, this.z]
 	}
 
 	/**
@@ -94,7 +94,7 @@ export class Box{
 	 * @returns {ArrayVector3} vec
 	 **/
 	get to(){
-		return [this.x+this.xs, (-this.y), this.z+this.zs]
+		return [(-this.x), (-this.y), this.z+this.zs]
 	}
 
 	get uv(){
