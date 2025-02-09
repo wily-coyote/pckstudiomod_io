@@ -149,8 +149,8 @@ BBPlugin.register("pckstudiomod_io", {
 				// move body parts to a more logical position
 				move_group(find_group("HEAD"), [0, 24, 0])
 				move_group(find_group("BODY"), [0, 24, 0])
-				move_group(find_group("LEG0"), [2, 12, 0])
-				move_group(find_group("LEG1"), [-2, 12, 0])
+				move_group(find_group("LEG0"), [1.9, 12, 0]) // in actual MC there is a 0.1px gap
+				move_group(find_group("LEG1"), [-1.9, 12, 0])
 				move_group(find_group("ARM0"), [5, 22, 0])
 				move_group(find_group("ARM1"), [-5, 22, 0])
 				Canvas.updateAll();
