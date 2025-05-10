@@ -178,6 +178,7 @@ BBPlugin.register("pckstudiomod_io", {
 				content: [
 					{type: 'h3', text: tl("mode.start.format.informations")},
 					{text:
+						'* In Minecraft: Legacy Console Edition, the bottom face of every cube is flipped vertically: what would be the bottom of the texture in Blockbench is actually on top in game. You can check if your texture is correct by exporting your model, importing it into pckstudio-mod and using the skin preview feature.\n' + 
 						'* You can export the model as a propdump using the `File > Export` action or with the `Save Model` action.\n' +
 						'* You can then import the resulting TSV into pckstudio-mod by right-clicking an existing skin and selecting `Import > Import property dump`.\n' +
 						'* Raw property import/export in TSV is a feature only available in [my fork of PCK Studio](https://github.com/wily-coyote/PCK-Studio), which is what this format is built around.'
