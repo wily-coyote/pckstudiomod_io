@@ -62,12 +62,13 @@ export function make_root(type){
 	cube.extend({
 		from: box.from,
 		to: box.to,
-		mirror_uv: box.m === 1,
 		autouv: 1
 	}).init();
 	cube.setUVMode(true);
 	cube.extend({
-		uv_offset: box.uv
+		uv_offset: box.uv,
+		// Mirror the UVs, god dammit.
+		mirror_uv: box.m === 1,
 	});
 	if(Project.selected_texture != null)
 		cube.applyTexture(Project.selected_texture);
